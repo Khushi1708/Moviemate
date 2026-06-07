@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMate - Genres</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="genres.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <span>Dark Mode</span>
+    </button>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../genres/moviemate.jpg" alt="MovieMate Logo">
+                <h2>MovieMate</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="main.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="genres.html">
+                            <i class="fas fa-film"></i>
+                            <span>Genres</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="watchlist.html">
+                            <i class="fas fa-heart"></i>
+                            <span>Watchlist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ratings.html">
+                            <i class="fas fa-star"></i>
+                            <span>Ratings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="recommendations.html">
+                            <i class="fas fa-magic"></i>
+                            <span>Recommendations</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search genres..." class="search-input">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="user-info">
+                    <div class="admin-indicator">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Admin</span>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Genres Content -->
+            <div class="genres-content">
+                <div class="section-header">
+                    <h1>Browse by Genre</h1>
+                    <div class="genres-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="popular">Popular</button>
+                        <button class="filter-btn" data-filter="new">New Releases</button>
+                    </div>
+                </div>
+
+                <div class="genres-grid">
+                    <!-- Genre cards will be dynamically added here -->
+                    <div class="genre-card">
+                        <div class="genre-image">
+                            <img src="images/action.jpg" alt="Action">
+                        </div>
+                        <div class="genre-info">
+                            <h3>Action</h3>
+                            <p>High-energy movies with thrilling sequences</p>
+                            <button class="browse-btn">Browse Action</button>
+                        </div>
+                    </div>
+                    <div class="genre-card">
+                        <div class="genre-image">
+                            <img src="images/comedy.jpg" alt="Comedy">
+                        </div>
+                        <div class="genre-info">
+                            <h3>Comedy</h3>
+                            <p>Laugh-out-loud movies and shows</p>
+                            <button class="browse-btn">Browse Comedy</button>
+                        </div>
+                    </div>
+                    <div class="genre-card">
+                        <div class="genre-image">
+                            <img src="images/drama.jpg" alt="Drama">
+                        </div>
+                        <div class="genre-info">
+                            <h3>Drama</h3>
+                            <p>Emotional and character-driven stories</p>
+                            <button class="browse-btn">Browse Drama</button>
+                        </div>
+                    </div>
+                    <div class="genre-card">
+                        <div class="genre-image">
+                            <img src="images/sci-fi.png" alt="Sci-Fi">
+                        </div>
+                        <div class="genre-info">
+                            <h3>Science Fiction</h3>
+                            <p>Futuristic and imaginative stories</p>
+                            <button class="browse-btn">Browse Sci-Fi</button>
+                        </div>
+                    </div>
+                    <div class="genre-card">
+                        <div class="genre-image">
+                            <img src="images/horror.jpg" alt="Horror">
+                        </div>
+                        <div class="genre-info">
+                            <h3>Horror</h3>
+                            <p>Scary and suspenseful movies</p>
+                            <button class="browse-btn">Browse Horror</button>
+                        </div>
+                    </div>
+                    <div class="genre-card">
+                        <div class="genre-image">
+                            <img src="images/romance.jpg" alt="Romance">
+                        </div>
+                        <div class="genre-info">
+                            <h3>Romance</h3>
+                            <p>Love stories and romantic comedies</p>
+                            <button class="browse-btn">Browse Romance</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="genres.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html> 

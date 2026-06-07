@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMate - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <span>Dark Mode</span>
+    </button>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../genres/moviemate.jpg" alt="MovieMate Logo">
+                <h2>MovieMate</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="main.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="genres.html">
+                            <i class="fas fa-film"></i>
+                            <span>Genres</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="watchlist.html">
+                            <i class="fas fa-heart"></i>
+                            <span>Watchlist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ratings.html">
+                            <i class="fas fa-star"></i>
+                            <span>Ratings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="recommendations.html">
+                            <i class="fas fa-magic"></i>
+                            <span>Recommendations</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search movies, TV shows..." class="search-input">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="user-info">
+                    <div class="admin-indicator">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Admin</span>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Welcome Section -->
+                <section class="welcome-section">
+                    <h1>Welcome back, <span class="username">User</span>!</h1>
+                    <p>Here's what's new in your movie world</p>
+                </section>
+
+                <!-- Quick Stats -->
+                <section class="stats-section">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Movies Watched</h3>
+                            <p class="stat-value">42</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Watchlist</h3>
+                            <p class="stat-value">18</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Average Rating</h3>
+                            <p class="stat-value">4.2</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent Activity -->
+                <section class="activity-section">
+                    <div class="section-header">
+                        <h2>Recent Activity</h2>
+                        <button class="view-all-btn">View All</button>
+                    </div>
+                    <div class="activity-grid">
+                        <!-- Activity items will be dynamically added here -->
+                    </div>
+                </section>
+
+                <!-- Recommendations -->
+                <section class="recommendations-section">
+                    <div class="section-header">
+                        <h2>Recommended for You</h2>
+                        <div class="recommendation-filters">
+                            <button class="filter-btn active">All</button>
+                            <button class="filter-btn">Movies</button>
+                            <button class="filter-btn">TV Shows</button>
+                        </div>
+                    </div>
+                    <div class="recommendations-grid">
+                        <!-- Recommendation cards will be dynamically added here -->
+                    </div>
+                </section>
+
+                <!-- Trending Now -->
+                <section class="trending-section">
+                    <div class="section-header">
+                        <h2>Trending Now</h2>
+                        <div class="trending-filters">
+                            <button class="filter-btn active">Today</button>
+                            <button class="filter-btn">This Week</button>
+                            <button class="filter-btn">This Month</button>
+                        </div>
+                    </div>
+                    <div class="trending-grid">
+                        <!-- Trending items will be dynamically added here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="theme.js"></script>
+    <script src="main.js"></script>
+</body>
+</html> 

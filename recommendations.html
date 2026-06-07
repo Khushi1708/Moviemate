@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMate - Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="recommendations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <span>Dark Mode</span>
+    </button>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="images/moviemate.jpg" alt="MovieMate Logo">
+                <h2>MovieMate</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="main.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="genres.html">
+                            <i class="fas fa-film"></i>
+                            <span>Genres</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="watchlist.html">
+                            <i class="fas fa-heart"></i>
+                            <span>Watchlist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ratings.html">
+                            <i class="fas fa-star"></i>
+                            <span>Ratings</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="recommendations.html">
+                            <i class="fas fa-users"></i>
+                            <span>Recommendations</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search recommendations..." class="search-input">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="user-info">
+                    <div class="admin-indicator">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Admin</span>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Recommendations Content -->
+            <div class="recommendations-content">
+                <div class="section-header">
+                    <h1>Your Recommendations</h1>
+                    <div class="recommendation-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="based-on-ratings">Based on Ratings</button>
+                        <button class="filter-btn" data-filter="similar-users">Similar Users</button>
+                        <button class="filter-btn" data-filter="trending">Trending</button>
+                    </div>
+                </div>
+
+                <div class="recommendation-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Recommendation Score</h3>
+                            <div class="stat-value">92%</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Movies Matched</h3>
+                            <div class="stat-value">45</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Similar Users</h3>
+                            <div class="stat-value">128</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendations-grid">
+                    <!-- Recommendation items will be dynamically added here -->
+                    <div class="empty-state">
+                        <i class="fas fa-magic"></i>
+                        <h2>No recommendations yet</h2>
+                        <p>Rate more movies to get personalized recommendations</p>
+                        <button class="rate-btn">Rate Movies</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="recommendations.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

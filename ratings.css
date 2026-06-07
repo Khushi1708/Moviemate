@@ -1,0 +1,223 @@
+/* Ratings Page Specific Styles */
+.ratings-content {
+    padding: calc(var(--top-bar-height) + 2rem) 2rem 2rem;
+}
+
+.ratings-content .section-header {
+    margin-bottom: 2rem;
+}
+
+.ratings-content .section-header h1 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.ratings-filters {
+    display: flex;
+    gap: 1rem;
+}
+
+.ratings-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.ratings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.rating-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--light-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.rating-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rating-poster {
+    position: relative;
+    width: 100%;
+    padding-top: 150%;
+}
+
+.rating-poster img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rating-info {
+    padding: 1.5rem;
+}
+
+.rating-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.rating-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.rating-score {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.rating-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.rating-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.edit-btn {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.delete-btn {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.star {
+    color: #ddd;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.star.active {
+    color: #ffd700;
+}
+
+/* Empty State */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.empty-state h2 {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin: 0 0 1rem;
+}
+
+.empty-state p {
+    color: #666;
+    margin: 0 0 2rem;
+}
+
+.browse-btn {
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.browse-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .ratings-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .ratings-content .section-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ratings-filters {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ratings-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .ratings-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+.rating-item {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.rating-item:nth-child(2) { animation-delay: 0.1s; }
+.rating-item:nth-child(3) { animation-delay: 0.2s; }
+.rating-item:nth-child(4) { animation-delay: 0.3s; }
+.rating-item:nth-child(5) { animation-delay: 0.4s; }
+.rating-item:nth-child(6) { animation-delay: 0.5s; } 

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMate - Watchlist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="watchlist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <span>Dark Mode</span>
+    </button>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="images/moviemate.jpg" alt="MovieMate Logo">
+                <h2>MovieMate</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="main.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../genres/index.html">
+                            <i class="fas fa-film"></i>
+                            <span>Genres</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="watchlist.html">
+                            <i class="fas fa-heart"></i>
+                            <span>Watchlist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ratings.html">
+                            <i class="fas fa-star"></i>
+                            <span>Ratings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="recommendations.html">
+                            <i class="fas fa-magic"></i>
+                            <span>Recommendations</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search your watchlist..." class="search-input">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="user-info">
+                    <div class="admin-indicator">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Admin</span>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Watchlist Content -->
+            <div class="watchlist-content">
+                <div class="section-header">
+                    <h1>Your Watchlist</h1>
+                    <div class="watchlist-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="movies">Movies</button>
+                        <button class="filter-btn" data-filter="tv-shows">TV Shows</button>
+                        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                    </div>
+                </div>
+
+                <div class="watchlist-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Items</h3>
+                            <div class="stat-value">24</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Watch Time</h3>
+                            <div class="stat-value">48h</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Upcoming</h3>
+                            <div class="stat-value">5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="watchlist-grid">
+                    <!-- Watchlist items will be dynamically added here -->
+                    <div class="empty-state">
+                        <i class="fas fa-heart"></i>
+                        <h2>Your Watchlist is Empty</h2>
+                        <p>Start adding movies and TV shows to your watchlist</p>
+                        <button class="browse-btn">Browse Movies</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="watchlist.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html> 
